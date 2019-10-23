@@ -1,0 +1,146 @@
+.framed {
+  width: 700px;
+  margin: 0 auto;
+}
+.tabContainer{
+  display: inline-flex;
+}
+.tabListWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+.tabPanelWrapper{
+  display: flex;
+  width: 65%;
+}
+.tabPanel{
+  width: 100%;
+}
+.sftpToast {
+  position: fixed;
+  top: 100px;
+  right: var(--space16);
+  z-index: var(--zAboveAllPlusOne);
+  text-align: right;
+
+  & > div {
+    margin-top: var(--space16);
+  }
+}
+
+.sftpCommonToast {
+  z-index: var(--zAboveAllPlusOne);
+
+  & > div {
+    margin-top: var(--space16);
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.labelSlide {
+  margin-left: 10px;
+}
+
+/* .slide */
+.slide {
+  position: relative;
+  width: 80px;
+  height: var(--font26);
+  background: var(--veryLightGrey);
+  border-radius: 50px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.slide::after {
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+  font: var(--font12) /var(--font26) Arial, sans-serif;
+  font-weight: bold;
+  color: var(--darkNeutralColor);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.15);
+  content: 'NO';
+}
+
+.slide::before {
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+  font: var(--font12) /var(--font26) Arial, sans-serif;
+  font-weight: bold;
+  color: var(--chartGreenColor);
+  content: 'YES';
+}
+
+.slide label {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  display: block;
+  width: 34px;
+  height: 20px;
+  cursor: pointer;
+  background: var(--lightSecondaryColor);
+  border-radius: 50px;
+  box-shadow: 0 2px 5px 0 rgba(44, 34, 34, 0.3);
+  transition: all 0.4s ease;
+}
+
+.slide input[type=radio] {
+  visibility: hidden;
+}
+
+.slide input[type=radio]:checked + label {
+  left: 43px;
+}
+
+/* end .slide */
+
+/* dropZone */
+.dropZone {
+  display: flex;
+  width: 100%;
+}
+
+.dropZone button {
+  margin-left: var(--space16);
+}
+
+.text {
+  flex: 1;
+  align-self: flex-end;
+  padding-bottom: var(--space8);
+  line-height: 1;
+  color: var(--lightNeutralColor);
+  border-bottom: 0.0625rem solid var(--lighterNeutralColor);
+}
+
+.fileUploadGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.focused.input {
+  color: var(--darkNeutralColor);
+  border-color: var(--lightPrimaryColor);
+  outline: 0;
+}
+
+.invalid.input {
+  color: var(--darkNeutralColor);
+  border-color: var(--alertColor);
+  outline: 0;
+}
+
+.disabled {
+  color: var(--lightNeutralColor);
+  cursor: not-allowed;
+  border-color: var(--lightestGreyColor);
+}
