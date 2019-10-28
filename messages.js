@@ -21,25 +21,50 @@ const messages = defineMessages({
     description: 'Label text for Provider ID in SFTPForm',
     defaultMessage: 'Provider ID',
   },
-  vendorName: {
-    id: 'SFTPForm.vendorName',
+  partnerName: {
+    id: 'SFTPForm.partnerName',
     description: 'Label text for Vendor Name in SFTPForm',
-    defaultMessage: 'Vendor Name',
+    defaultMessage: 'Partner Name',
   },
-  displayName: {
-    id: 'SFTPForm.displayName',
+  partnerDisplayName: {
+    id: 'SFTPForm.partnerDisplayName',
     description: 'Label text for Display Name in SFTPForm',
-    defaultMessage: 'Display Name',
+    defaultMessage: 'Partner Display Name',
   },
-  logo: {
-    id: 'SFTPForm.logo',
-    description: 'Label text for Logo in SFTPForm',
-    defaultMessage: 'Logo',
+  partnerLogo: {
+    id: 'SFTPForm.partnerLogo',
+    description: 'Label text for Partner Logo in SFTPForm',
+    defaultMessage: 'partnerLogo',
   },
-  browse: {
-    id: 'SFTPForm.upload',
-    description: 'Button to browse logo',
-    defaultMessage: 'Browse',
+  vendor: {
+    id: 'SFTPForm.vendor',
+    description: 'Label text for Vendor in SFTPForm',
+    defaultMessage: 'Vendor',
+  },
+  contentScope: {
+    id: 'SFTPForm.contentScope',
+    description: 'Label text for Content Scope in SFTPForm',
+    defaultMessage: 'Content Scope',
+  },
+  curationPermission: {
+    id: 'SFTPForm.curationPermission',
+    description: 'Label text for Curation Permission in SFTPForm',
+    defaultMessage: 'Curation Permission',
+  },
+  launchSource: {
+    id: 'SFTPForm.launchSource',
+    description: 'Label text for Launch Source in SFTPForm',
+    defaultMessage: 'Launch Source',
+  },
+  launchTarget: {
+    id: 'SFTPForm.launchTarget',
+    description: 'Label text for Launch Target in SFTPForm',
+    defaultMessage: 'Launch Target',
+  },
+  trackingMethod: {
+    id: 'SFTPForm.trackingMethod',
+    description: 'Label text for Tracking Method in SFTPForm',
+    defaultMessage: 'Tracking Method',
   },
   status: {
     id: 'SFTPForm.status',

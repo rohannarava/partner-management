@@ -20,6 +20,84 @@ import getSftpViewsPath from '../paths'
 // } from 'react-accessible-accordion'
 import styles from './SftpForm.css'
 
+const contentScope = [
+  {
+    name: 'Select',
+    id: '',
+  },
+  {
+    name: 'STOCK',
+    id: 'STOCK',
+  },
+  {
+    name: 'CUSTOM',
+    id: 'CUSTOM',
+  },
+]
+const curationPermission = [
+  {
+    name: 'Select',
+    id: '',
+  },
+  {
+    name: 'SKILLSOFT',
+    id: 'SKILLSOFT',
+  },
+  {
+    name: 'CUSTOM',
+    id: 'CUSTOM',
+  },
+]
+const launchSource = [
+  {
+    name: 'Select',
+    id: '',
+  },
+  {
+    name: 'ADAPTER',
+    id: 'ADAPTER',
+  },
+  {
+    name: 'URL',
+    id: 'URL',
+  },
+  {
+    name: 'PLAYER_WITH_CONFIG',
+    id: 'PLAYER_WITH_CONFIG',
+  },
+]
+const launchTarget = [
+  {
+    name: 'Select',
+    id: '',
+  },
+  {
+    name: 'TAB',
+    id: 'TAB',
+  },
+  {
+    name: 'EMBED',
+    id: 'EMBED',
+  },
+]
+const trackingMethod = [
+  {
+    name: 'Select',
+    id: '',
+  },
+  {
+    name: 'LAUNCH',
+    id: 'LAUNCH',
+  },
+  {
+    name: 'SELF_REPORTED',
+    id: 'SELF_REPORTED',
+  },
+  {
+    name: 'PROVIDER',
+    id: 'PROVIDER',
+  },
+]
 const statusProvider = [
   {
     name: 'Select',
@@ -73,21 +151,6 @@ const businessModelProvider = [
   },
 ]
 
-const contentRightsProvider = [
-  {
-    name: 'Select',
-    id: '',
-  },
-  {
-    name: 'Org Specific',
-    id: 'OrgSpecific',
-  },
-  {
-    name: 'Non-Org Specific',
-    id: 'NonOrgSpecific',
-  },
-]
-
 const dataStorageRegionProvider = [
   {
     name: 'Select',
@@ -123,7 +186,26 @@ const dataStorageRegionProvider = [
 //     id: 'pki_auth',
 //   },
 // ]
-
+const contentScopeOptions = contentScope.map(({ name: label, id: value }) => ({
+  label,
+  value,
+}))
+const curationPermissionOptions = curationPermission.map(({ name: label, id: value }) => ({
+  label,
+  value,
+}))
+const launchSourceOptions = launchSource.map(({ name: label, id: value }) => ({
+  label,
+  value,
+}))
+const launchTargetOptions = launchTarget.map(({ name: label, id: value }) => ({
+  label,
+  value,
+}))
+const trackingMethodOptions = trackingMethod.map(({ name: label, id: value }) => ({
+  label,
+  value,
+}))
 const statusOptions = statusProvider.map(({ name: label, id: value }) => ({
   label,
   value,
@@ -135,12 +217,6 @@ const businessRelationshipOptions = businessRelationshipProvider.map(
   })
 )
 const businessModelOptions = businessModelProvider.map(
-  ({ name: label, id: value }) => ({
-    label,
-    value,
-  })
-)
-const contentRightOptions = contentRightsProvider.map(
   ({ name: label, id: value }) => ({
     label,
     value,
@@ -218,9 +294,25 @@ export class SftpCreateForm extends Component {
       content: (
         <div>
           {/* <Field {...formFields.providerId} /> */}
-          <Field {...formFields.vendorName} />
-          <Field {...formFields.displayName} />
-          <Field {...formFields.logo} />
+          <Field {...formFields.partnerName} />
+          <Field {...formFields.partnerDisplayName} />
+          <Field {...formFields.partnerLogo} />
+          <Field {...formFields.vendor} />
+          <Field {...formFields.contentScope} 
+            options={contentScopeOptions}
+          />
+          <Field {...formFields.curationPermission} 
+            options={curationPermissionOptions}
+          />
+          <Field {...formFields.launchSource} 
+            options={launchSourceOptions}
+          />
+          <Field {...formFields.launchTarget} 
+            options={launchTargetOptions}
+          />
+          <Field {...formFields.trackingMethod} 
+            options={trackingMethodOptions}
+          />
           <Field
             {...formFields.status}
             options={statusOptions}
